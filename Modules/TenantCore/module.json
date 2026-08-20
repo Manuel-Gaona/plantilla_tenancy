@@ -1,0 +1,11 @@
+{
+    "name": "TenantCore",
+    "alias": "tenantcore",
+    "description": "",
+    "keywords": [],
+    "priority": 100,
+    "providers": [
+        "Modules\\TenantCore\\Providers\\TenantCoreServiceProvider"
+    ],
+    "files": []
+}

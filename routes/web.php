@@ -1,10 +1,5 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
-
-
-foreach (config('tenancy.central_domains') as $domain) {
-    Route::domain($domain)->group(function () {
-        Route::view('/', 'welcome')->name('home');
-    });
-}
+// Las rutas centrales viven en cada módulo (Modules/Marketing, Modules/Account,
+// Modules/SaasAdmin). Este archivo se mantiene solo porque bootstrap/app.php lo
+// registra explícitamente vía withRouting(web: ...).

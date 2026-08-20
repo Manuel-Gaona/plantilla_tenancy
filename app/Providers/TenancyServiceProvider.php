@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace App\Providers;
 
+use Illuminate\Contracts\Http\Kernel;
 use Illuminate\Support\Facades\Event;
-use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
 use Stancl\JobPipeline\JobPipeline;
 use Stancl\Tenancy\Events;
@@ -100,7 +100,6 @@ class TenancyServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->bootEvents();
-        $this->mapRoutes();
 
         $this->makeTenancyMiddlewareHighestPriority();
     }
@@ -118,16 +117,6 @@ class TenancyServiceProvider extends ServiceProvider
         }
     }
 
-    protected function mapRoutes()
-    {
-        $this->app->booted(function () {
-            if (file_exists(base_path('routes/tenant.php'))) {
-                Route::namespace(static::$controllerNamespace)
-                    ->group(base_path('routes/tenant.php'));
-            }
-        });
-    }
-
     protected function makeTenancyMiddlewareHighestPriority()
     {
         $tenancyMiddleware = [
@@ -142,7 +131,7 @@ class TenancyServiceProvider extends ServiceProvider
         ];
 
         foreach (array_reverse($tenancyMiddleware) as $middleware) {
-            $this->app[\Illuminate\Contracts\Http\Kernel::class]->prependToMiddlewarePriority($middleware);
+            $this->app[Kernel::class]->prependToMiddlewarePriority($middleware);
         }
     }
 }
