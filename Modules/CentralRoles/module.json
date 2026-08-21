@@ -1,0 +1,11 @@
+{
+    "name": "CentralRoles",
+    "alias": "centralroles",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\CentralRoles\\Providers\\CentralRolesServiceProvider"
+    ],
+    "files": []
+}

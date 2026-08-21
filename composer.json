@@ -11,10 +11,14 @@
     "require": {
         "php": "^8.3",
         "laravel/framework": "^13.17",
+        "laravel/pennant": "*",
         "laravel/tinker": "^3.0",
         "livewire/blaze": "^1.0",
         "livewire/livewire": "^4.1",
+        "lorisleiva/laravel-actions": "*",
+        "mhmiton/laravel-modules-livewire": "*",
         "nwidart/laravel-modules": "*",
+        "spatie/laravel-permission": "*",
         "stancl/tenancy": "*"
     },
     "require-dev": {

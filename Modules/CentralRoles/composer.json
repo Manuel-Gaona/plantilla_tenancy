@@ -1,0 +1,30 @@
+{
+    "name": "nwidart/centralroles",
+    "description": "",
+    "authors": [
+        {
+            "name": "Nicolas Widart",
+            "email": "n.widart@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [],
+            "aliases": {
+
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\CentralRoles\\": "app/",
+            "Modules\\CentralRoles\\Database\\Factories\\": "database/factories/",
+            "Modules\\CentralRoles\\Database\\Seeders\\": "database/seeders/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Modules\\CentralRoles\\Tests\\": "tests/"
+        }
+    }
+}
