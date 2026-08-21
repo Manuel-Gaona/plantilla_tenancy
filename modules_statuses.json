@@ -1,3 +1,4 @@
 {
-    "CentralRoles": true
+    "CentralRoles": true,
+    "CentralTenants": true
 }

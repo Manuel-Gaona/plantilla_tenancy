@@ -1,0 +1,12 @@
+{
+    "name": "CentralTenants",
+    "alias": "centraltenants",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\CentralTenants\\Providers\\CentralTenantsServiceProvider"
+    ],
+    "files": [],
+    "requires": ["CentralRoles"]
+}

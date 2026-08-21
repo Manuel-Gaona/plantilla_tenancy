@@ -1,0 +1,30 @@
+{
+    "name": "nwidart/centraltenants",
+    "description": "",
+    "authors": [
+        {
+            "name": "Nicolas Widart",
+            "email": "n.widart@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [],
+            "aliases": {
+
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\CentralTenants\\": "app/",
+            "Modules\\CentralTenants\\Database\\Factories\\": "database/factories/",
+            "Modules\\CentralTenants\\Database\\Seeders\\": "database/seeders/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Modules\\CentralTenants\\Tests\\": "tests/"
+        }
+    }
+}
